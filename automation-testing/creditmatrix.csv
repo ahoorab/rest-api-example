@@ -1,0 +1,8 @@
+scotia,rbct,null,NetShorts,4,scot-rbc,Enabled,225000000,300000000,75000000,100000000
+tdbank,rbct,null,NetShorts,5,tdbk-rbc,Enabled,225000000,300000000,75000000,100000000
+scotia,hera,PBClient,NetShorts,6,scot-pb,Enabled,225000000,300000000,75000000,100000000
+tdbank,grnl,PBClient,NetShorts,8,tdbk-grn,Enabled,45000000,60000000,15000000,20000000
+rbct,scotia,null,NetShorts,7,rbc-ib,Enabled,225000000,300000000,75000000,100000000
+frst,scnd,null,NetShorts,9,frst-scd,Enabled,11250000,15000000,3750000,5000000
+scotia,kitco,null,NetShorts,10,scot-ktc,Enabled,75000000,100000000,150000000,200000000
+kitco,scotia,null,NetShorts,11,ktco-sco,Enabled,3750000,5000000,11250000,15000000

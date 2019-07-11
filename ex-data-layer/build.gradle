@@ -1,0 +1,16 @@
+jar {
+    baseName = 'ex-data-layer'
+}
+
+dependencies {
+    compile 'org.hibernate.validator:hibernate-validator'
+    compile 'io.springfox:springfox-swagger2:2.9.2'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile group: 'com.nimbusds', name: 'nimbus-jose-jwt', version: '6.5'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.6'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+}
+
+dependencyManagement {
+    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
+}

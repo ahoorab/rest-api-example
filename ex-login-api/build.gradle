@@ -1,0 +1,22 @@
+jar {
+    baseName = 'ex-login-api'
+}
+
+dependencies {
+    compile project(':ex-business-layer')
+    //spring boot rest
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+
+    compile group: 'org.json', name: 'json', version: '20180813'
+
+    compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.467'
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-core', version: '1.11.467'
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-cognitoidp', version: '1.11.467'
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-cognitoidentity', version: '1.11.467'
+    compile group: 'com.nimbusds', name: 'nimbus-jose-jwt', version: '6.5'
+}
+
+dependencyManagement {
+    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
+}

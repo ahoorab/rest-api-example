@@ -1,0 +1,18 @@
+    def defaultProfile='default'
+    def integrationTestProfile='integration-tests'
+    def propertyDrivenProfile;
+    
+    if (project.hasProperty('integration-tests')) {
+        // Mysql database testing
+        propertyDrivenProfile = integrationTestProfile
+        apply from: rootProject.file(project.getName() + '/gradle/integration-tests_profile.gradle');
+
+        println 'Using profile: "' + propertyDrivenProfile + '" for ' + project.getName()
+    
+    } else {
+        propertyDrivenProfile = defaultProfile
+        // Default when no profile property is specified, used for testing
+        // Embedded H2 database
+        apply from: rootProject.file(project.getName() + '/gradle/default_profile.gradle');
+        println 'Using profile: "' + propertyDrivenProfile + '" for ' + project.getName()
+    }

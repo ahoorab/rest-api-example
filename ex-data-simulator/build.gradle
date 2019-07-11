@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+bootJar {
+    baseName = 'ex-data-simulator'
+}
+
+dependencies {
+    //ex modules dependencies
+    compile project(':ex-data-layer')
+    compile project(':ex-business-layer')
+
+    //spring boot rest
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'org.springframework:spring-websocket'
+    compile 'org.springframework:spring-messaging'
+
+    compile group: 'org.json', name: 'json', version: '20180813'
+}

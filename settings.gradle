@@ -1,0 +1,8 @@
+rootProject.name = 'ex-backend'
+
+include 'ex-data-layer'
+include 'ex-persistence-layer'
+include 'ex-business-layer'
+include 'ex-login-api'
+include 'ex-rest-api'
+include 'ex-data-simulator'

@@ -1,0 +1,10 @@
+dependencies {
+    compile 'mysql:mysql-connector-java:5.1.6'
+    compile 'org.postgresql:postgresql:42.2.5'
+}
+
+test {
+  println 'setting active profile integration-tests'
+  systemProperty 'spring.profiles.active', 'integration-tests'
+  systemProperty 'integration-tests', 'jpa'
+}

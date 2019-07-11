@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+			 %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springframework.web" level="INFO" />
+	<logger name="com.example.ex.controller" level="debug">
+		<appender-ref ref="STDOUT" />
+	</logger>
+</configuration>
